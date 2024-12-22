@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <div class="logo">Skipify</div>
+
+    <!-- <h2>Login Page</h2> -->
+    <form method="POST">
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <br>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username"><br><br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+        <a href="#" class="forgot-password">Forgot Password?</a>
+    </form>
+</body>
+
+</html>

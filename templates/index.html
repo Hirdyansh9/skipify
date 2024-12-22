@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify Trimmer</title>
+</head>
+
+<body>
+    <h1>Spotify Trimmer</h1>
+    {% if session.get('token_info') %}
+    <p>Welcome! You are logged in.</p>
+    <a href="/logout">Logout</a>
+    {% else %}
+    <p><a href="/login">Login with Spotify</a></p>
+    {% endif %}
+    <h2>Saved Trims</h2>
+    <ul>
+        {% for trim in trims %}
+        <li>Song URI: {{ trim.song_uri }}, Start Time: {{ trim.start_time }}s, End Time: {{ trim.end_time }}s</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
