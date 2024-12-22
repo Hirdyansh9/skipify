@@ -1,0 +1,4 @@
+flask
+streamlit
+spotipy
+requests
